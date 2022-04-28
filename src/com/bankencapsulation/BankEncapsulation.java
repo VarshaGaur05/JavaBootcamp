@@ -24,37 +24,38 @@ Display the total savings.
  */
 import java.util.*;
 
+
+import java.util.*;
+
 class SavingAmount {
     //write your code here
 
-    private int savings;
-    public void setInitialSaving(int savings){
-        savings = savings;
+    private int saving;
+
+    public void setInitialSaving(int amount) {
+        saving = amount;
     }
 
-    public int getCurrentSaving(){
-        return savings;
+    public void incrementSaving() {
+        saving += 1000;
     }
 
-    public void decrementSaving(){
-        int decrementSaving = savings - 100;
-        savings =  decrementSaving;
+    public void decrementSaving() {
+        saving -= 100;
     }
 
-    public void incrementSaving(){
-        int incrementSaving = savings + 1000;
-        savings = incrementSaving;
+    public int getCurrentSaving() {
+        return saving;
     }
 
-    public void checkSaving(){
-        if(savings >1000) {
+    public void checkSaving() {
+        if (saving >=1000) {
             System.out.println("Congratulations! You have saved a good amount");
-        }else if(savings <1000 || savings >=0){
+        } else if (saving >= 0 && saving <1000) {
             System.out.println("Insufficient saving!");
-        } else{
+        } else if (saving < 0) {
             System.out.println("You are in debt");
         }
-
     }
 }
 public class BankEncapsulation {
@@ -68,7 +69,6 @@ public class BankEncapsulation {
         obj.incrementSaving();
         obj.checkSaving();
         System.out.println("Your current savings are Rs" +" "+ obj.getCurrentSaving());
-
     }
 
 

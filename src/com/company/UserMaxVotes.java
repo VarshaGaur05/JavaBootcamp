@@ -14,8 +14,10 @@ Output would be - User with the most votes is User: 4
 An array has already been initialized in the code below. So, you don't have to give any input.
 */
 
+import java.io.IOException;
+
 public class UserMaxVotes {
-    public static void main(String args[]) {
+   /* public static void main(String args[]) {
         int[] votes = {1,2,34,5,6,7,8,9,10,11,12,13,14,15};
         int userWithMostVotes = mostVotes(votes);
         System.out.println("User with the most votes is User: " + userWithMostVotes);
@@ -31,5 +33,27 @@ public class UserMaxVotes {
             }
         }
         return index;
+    }*/
+   public static void main(String args[]) {
+       fun1();
+       System.out.print("A");
+   }
+
+    static void fun1() {
+        try {
+            fun2();
+            System.out.print("B");
+        } catch (Exception e) {
+            System.out.print("C");
+        }
+    }
+
+    static void fun2() throws IOException {
+        fun3();
+        System.out.print("D");
+    }
+
+    static void fun3() throws IOException {
+        throw new IOException();
     }
 }

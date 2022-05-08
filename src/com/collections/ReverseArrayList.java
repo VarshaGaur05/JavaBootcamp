@@ -14,26 +14,17 @@ Output: 2 4 7 1 3
         int size = scanner.nextInt();
 
         ArrayList<Integer> inputlist =  new ArrayList<>();
-
-
         for(int i=0; i<size;i++)
             inputlist.add(scanner.nextInt());
-
-
         ArrayList<Integer> list =  reverseArrayList(inputlist);
-
         System.out.println(list);
-
     }
 
     public static ArrayList<Integer> reverseArrayList(ArrayList<Integer> inputlist){
 
         ArrayList<Integer> outputArraylist =  new ArrayList<>();
-
         for(int i=0; i<inputlist.size();i++)
             outputArraylist.add(0,inputlist.get(i));
-
         return outputArraylist;
-
     }
 }
